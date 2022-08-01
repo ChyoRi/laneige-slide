@@ -1,0 +1,56 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+@mixin flex($just) {
+    display: flex;
+    align-items: center;
+    justify-content: $just;
+}
+
+@mixin backGround($img) {
+    background-image: $img;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+$border_color_black: 1px solid #000;
+
+body {
+    @include flex(center);
+    height: 100vh;
+}
+
+.slide_wrap {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    border: $border_color_black;
+
+    ul {
+        @include flex();
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 500%;
+
+        li {
+            width: calc(500% / 5);
+        }
+
+    }
+
+}
+
+
