@@ -82,6 +82,9 @@ ul li a img {
   font-weight: 300;
   margin-bottom: 10px;
 }
+.text_box > span {
+  font-size: 1.6rem;
+}
 
 .page_nav_wrap {
   display: flex;
@@ -91,12 +94,45 @@ ul li a img {
   bottom: 5%;
   left: 50%;
   transform: translateX(-50%);
-  border: 1px solid #000;
 }
-.page_nav_wrap > .prev, .page_nav_wrap .next, .page_nav_wrap .play {
+.page_nav_wrap > .prev, .page_nav_wrap .next, .page_nav_wrap .pause {
   display: block;
-  width: 22px;
-  height: 22px;
-  font-size: 22px;
-  font-weight: 700;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+.page_nav_wrap > .prev {
+  background-image: url("../images/angle-left.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.page_nav_wrap > .pause {
+  background-image: url("../images/pause.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.page_nav_wrap > .next {
+  background-image: url("../images/angle-right.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.page_nav_wrap > ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.page_nav_wrap > ul > li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+.page_nav_wrap > ul > li > button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.4);
 }/*# sourceMappingURL=style.css.map */

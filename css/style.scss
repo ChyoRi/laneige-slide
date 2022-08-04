@@ -41,10 +41,11 @@ $border_color_black: 1px solid #000;
     background-image: $url;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: contain;
 }
 
 $border_color_black: 1px solid #000;
+$color_gray : rgba(0, 0, 0, 0.4);
 
 body {
     @include flex(center);
@@ -103,6 +104,10 @@ ul {
         font-weight: 300;
         margin-bottom: 10px;
     }
+
+    & > span {
+        font-size: 1.6rem;
+    }
 }
 
 .page_nav_wrap {
@@ -111,13 +116,41 @@ ul {
     bottom: 5%;
     left: 50%;
     transform: translateX(-50%);
-    border: $border_color_black;
 
-    & > .prev,.next,.play {
+    & > .prev,.next,.pause {
         display: block;
-        width: 22px;
-        height: 22px;
-        font-size: 22px;
-        font-weight: 700;
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+    }
+
+    & > .prev {
+        @include backGround(url('../images/angle-left.svg'));
+    }
+
+    & > .pause {
+        @include backGround(url('../images/pause.svg'));
+    }
+
+    & > .next {
+        @include backGround(url('../images/angle-right.svg'));
+    }
+
+    & > ul {
+        @include flex(center);
+
+        & > li {
+            @include flex(center);
+            margin-right: 10px;
+
+            & > button {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: $color_gray;
+            }
+
+        }
+
     }
 }
