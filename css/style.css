@@ -135,4 +135,7 @@ ul li a img {
   height: 10px;
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.4);
+}
+.page_nav_wrap > ul > li.active > button {
+  background-color: red;
 }/*# sourceMappingURL=style.css.map */
